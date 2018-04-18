@@ -7,15 +7,15 @@
 
         <title>Duffy</title>
 
+        <!-- TODO: consider using Less-->
         <!-- Bulma -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway|Supermercado+One" rel="stylesheet">
         <!-- Font Awesome Icons -->
-        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-
+        <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
         <!-- Custom Styles -->
-        <link rel="stylesheet" href="/css/app.css">
+        <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
     <body>
         <nav class="navbar is-transparent">
             <div class="navbar-brand">
@@ -40,6 +40,15 @@
                 </div>
             </div>
         </nav>
+
+        <div class="iconsContainer">
+            <div>
+                <a href="https://medium.com/@duffy.ma7" target="_blank">
+                <i class="fab fa-2x fa-medium"></i></a></div>
+            <div>
+                <a href="https://github.com/mikeduffy7" target="_blank">
+                    <i class="fab fa-2x fa-github"></i></a></div>
+        </div>
 
         @yield('content')
     </body>

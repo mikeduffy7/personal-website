@@ -12,7 +12,7 @@
     <div class="container">
         <div class="columns">
             <div class="column is-half is-offset-one-quarter has-text-centered">
-                <i class="fab fa-github"></i> <a href="https://github.com/mikeduffy7">mikeduffy7</a>
+                
             </div>
         </div>
     </div>
