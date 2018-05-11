@@ -26,3 +26,11 @@ Route::get('code', function(){
 Route::get('writing', function(){
     return view('writing');
 });
+
+Route::get('todo', function(){
+    return view('todo');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

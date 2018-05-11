@@ -7,9 +7,8 @@
 
         <title>Duffy</title>
 
-        <!-- TODO: consider using Less-->
-        <!-- Bulma -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
+        <!-- bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway|Supermercado+One" rel="stylesheet">
         <!-- Font Awesome Icons -->
@@ -17,39 +16,36 @@
         <!-- Custom Styles -->
         <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
     <body>
-        <nav class="navbar is-transparent">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="/">
-                    DUFFY
-                </a>
-            </div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Duffy</a>
+                </div>
 
-            <div id="navbarExampleTransparentExample" class="navbar-menu">
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <a class="navbar-item" href="about">
-                            About Me
-                        </a>
-                        <a class="navbar-item" href="code">
-                            Code
-                        </a>
-                        <a class="navbar-item" href="writing">
-                            Writing
-                        </a>
-                    </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="about">About Me</a></li>
+                        <li><a href="code">Code</a></li>
+                        <li><a href="writing">Writing</a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
 
-        <div class="iconsContainer">
-            <div>
-                <a href="https://medium.com/@duffy.ma7" target="_blank">
-                <i class="fab fa-2x fa-medium"></i></a></div>
-            <div>
-                <a href="https://github.com/mikeduffy7" target="_blank">
-                    <i class="fab fa-2x fa-github"></i></a></div>
-        </div>
-
+    <!-- insert partials here -->
         @yield('content')
+
     </body>
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="footer-icons">
+                <a href="https://medium.com/@duffy.ma7" target="_blank">
+                    <i class="fab fa-2x fa-medium"></i>
+                </a>
+                <a href="https://github.com/mikeduffy7" target="_blank">
+                    <i class="fab fa-2x fa-github"></i>
+                </a>
+            </div>       
+        </div>
+    </footer>
 </html>

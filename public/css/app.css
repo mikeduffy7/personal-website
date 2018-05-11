@@ -8,23 +8,29 @@ a, a:hover {
     font-family: "Raleway";
 }
 
-.iconsContainer {
-    display: flex;
-    margin: 0 40% 0 40%;
-    justify-content: center;
-    align-content: center;
-    padding: .5rem;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.03);
-    border-radius: 4px;
-    color: #84613D; 
-    background: #FDF9EA;
-    border-bottom: 1px solid #F9F2D6;
-    border-right: 1px solid #F9F2D6;
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f5f5f5;
 }
-.iconsContainer div {
-    max-width: 125px;
-    background: rgba(255,255,255,0.5);
-    margin: .25rem;
-    padding: .25rem;
+
+ul li {
+    list-style: none;
 }
+
+textarea {
+    resize: none;
+}
+
+.footer-icons {
+    margin-top: 15px;
+}
+
+.footer-icons > a:first-child {
+    margin-right: 10px;
+}
+
+
  
