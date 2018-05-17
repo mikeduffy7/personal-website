@@ -16,6 +16,7 @@
 
                     <div>
                         <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#article-upload">Upload Article</button>
+                        <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#blog-upload">Upload Blog</button>
                         <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#code-upload">Upload Code</button>
                         <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#">Personal Finances</button>
                         <a href="todo"><button type="button" class="btn btn-primary btn-md">To-Do List</button></a>
@@ -33,4 +34,5 @@
 
 @include('articles.upload')
 @include('code.upload')
+@include('blog.upload')
 @endsection

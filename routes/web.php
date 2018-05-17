@@ -31,6 +31,10 @@ Route::get('todo', function(){
     return view('todo');
 });
 
+Route::get('blog', 'BlogController@index');
+
+Route::post('blog-post', 'BlogController@post');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
