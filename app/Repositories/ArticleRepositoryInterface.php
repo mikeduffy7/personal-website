@@ -33,19 +33,20 @@ interface ArticleRepositoryInterface
      * @param int
      */
     public function delete($id);
+
     /** 
-     * Update an article
+     * update an article
      * 
      * @param int
      * @param array
      */
     public function update($id, $data);
+
     /**
-     * Get latest article
+     * get latest article by type
      * 
      * @param string
      * 
      */
-
      public function latest($type);
 }

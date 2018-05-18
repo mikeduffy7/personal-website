@@ -24,8 +24,8 @@
 
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="blog">Blog</a></li>
                         <li><a href="about">About Me</a></li>
+                        <li><a href="blog">Blog</a></li>
                         <li><a href="code">Code</a></li>
                         <li><a href="writing">Writing</a></li>
                     </ul>

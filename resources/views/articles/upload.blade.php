@@ -27,7 +27,8 @@
                     <option value="article">Article</option>
                 </select>
             </div>
-                <input type="submit" value="Submit" class="btn btn-primary">
+            
+            <input type="submit" value="Submit" class="btn btn-primary">
         </form>
     </div>
 @endsection
