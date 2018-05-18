@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-interface BlogRepositoryInterface 
+interface ArticleRepositoryInterface 
 {
     /**
      * Get all blog posts

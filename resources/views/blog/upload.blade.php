@@ -6,7 +6,6 @@
                 <h4 class="modal-title">Upload Blog</h4>
             </div>
             <div class="modal-body">
-                
                 <form action="blog-post" method="post">
                     {{csrf_field()}}
                     <div class="form-group">
@@ -24,19 +23,20 @@
                         </textarea>
                     </div>
                     <div class="form-group">
-                        <label for="date">Date</label>
-                        <input name="date" 
-                            type="text" 
-                            class="form-control">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Type
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Article</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <input type="submit" value="Submit" class="btn btn-primary">
                 </form>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                {{-- <button type="submit" class="btn btn-primary">Save changes</button> --}}
-            </div>
+                </div>
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->

@@ -31,9 +31,9 @@ Route::get('todo', function(){
     return view('todo');
 });
 
-Route::get('blog', 'BlogController@index');
+Route::get('blog', 'ArticleController@blog');
 
-Route::post('blog-post', 'BlogController@post');
+Route::post('blog-post', 'ArticleController@post');
 
 Auth::routes();
 
