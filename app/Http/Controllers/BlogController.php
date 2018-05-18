@@ -3,15 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use App\Blog;
+use App\Repositories\BlogRepositoryInterface;
 
 class BlogController extends Controller
 {
-    public function index() {
-        $blogs = Blog::all();
+    protected $post;
 
-        return view('blog', compact('blogs'));
+    public function __construct(BlogRepositoryInterface $post)
+    {
+        $this->post = $post;
+    }
+
+    public function index() {
+        $post = $this->post->latest();
+
+        return view('blog', compact('post'));
     }
 
     public function post(Request $request) {
