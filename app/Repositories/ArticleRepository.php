@@ -2,6 +2,7 @@
 
 namespace App\Repositories;
 use App\Article;
+use Illuminate\Http\Request;
 
 class ArticleRepository implements ArticleRepositoryInterface 
 {
@@ -15,6 +16,17 @@ class ArticleRepository implements ArticleRepositoryInterface
         return Article::all();
     }
 
+    public function save(Request $request) 
+    {
+        $post = new Article();
+        
+        $post->title = $request->title;
+        $post->body = $request->body;
+        $post->type = $request->type;
+
+        $post->save();
+    }
+
     public function delete($id)
     {
         Article::delete($id);
@@ -25,8 +37,8 @@ class ArticleRepository implements ArticleRepositoryInterface
         Article::find($id)->update($data);
     }
 
-    public function latest()
+    public function latest($type)
     {
-        return Article::orderBy("created_at")->limit(1)->get();
+        return Article::where('type', $type)->orderBy("created_at")->limit(1)->get();
     }
 }

@@ -40,5 +40,10 @@ textarea {
     margin: 0 20px 10px 20px;
 }
 
+.form-submit {
+    margin: 0 auto;
+    float: none;
+}
+
 
  

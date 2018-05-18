@@ -33,8 +33,12 @@ Route::get('todo', function(){
 
 Route::get('blog', 'ArticleController@blog');
 
-Route::post('blog-post', 'ArticleController@post');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('article/upload', function(){
+    return view('articles.upload');
+});
+
+Route::post('article/post', 'ArticleController@post');

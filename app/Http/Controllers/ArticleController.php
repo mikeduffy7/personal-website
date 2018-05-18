@@ -15,25 +15,21 @@ class ArticleController extends Controller
     }
 
     public function index() {
-        $post = $this->post->latest();
+        $post = $this->post->latestBlog();
 
         return view('blog', compact('post'));
     }
 
     public function blog() {
-        $post = $this->post->latest();
+        $post = $this->post->latest('blog');
 
         return view('blog', compact('post'));
     }
 
     public function post(Request $request) {
-        $blog = new Blog();
         
-        $blog->title = $request->title;
-        $blog->body = $request->body;
+        $post = $this->post->save($request);
 
-        $blog->save();
-
-        return view('blog');
+        return view('home');
     }   
 }

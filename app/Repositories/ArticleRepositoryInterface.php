@@ -2,40 +2,50 @@
 
 namespace App\Repositories;
 
+use Illuminate\Http\Request;
+
 interface ArticleRepositoryInterface 
 {
     /**
-     * Get all blog posts
+     * get all articles
      * 
      * @return mixed
      */
     public function all();
 
     /**
-     * Get a blog post by id
+     * get an article by id
      * 
      * @param int
      */
-    
     public function get($id);
+
     /**
-     * Delete a blog post
+     * save an article by id
+     * 
+     * @param int
+     */
+    public function save(Request $request);
+
+    /**
+     * delete an article
      * 
      * @param int
      */
     public function delete($id);
     /** 
-     * Update blog post
+     * Update an article
      * 
      * @param int
      * @param array
      */
     public function update($id, $data);
     /**
-     * Get latest blog post
+     * Get latest article
      * 
-     * @return mixed
+     * @param string
+     * 
      */
 
-     public function latest();
+     public function latest($type);
 }
